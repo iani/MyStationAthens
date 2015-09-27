@@ -1,0 +1,1 @@
+/Users/iani/Library/Application Support/SuperCollider/Extensions/150921PerformigrationsOsmosisTransitions/Classes/Scenes/01_HasanSong.sc

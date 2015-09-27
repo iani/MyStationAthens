@@ -1,0 +1,276 @@
+* Master plan notes
+** Master plan 1 (10.9.)
+1. eisitirio 1 - nobody
+2. synora grammika ensemble
+3. mitera lefteris
+4. kafes reza 2
+5. poima reza 1
+6. eisitirio 2 hasan solo
+7. song
+8. eisitirio 3 ensemble (finale)
+
+Buffers:
+
+|-----+--------------------------+-----------------+----------|
+| <3> |                          |                 |          |
+| scene number | scene name               | buffer          | duration |
+|-----+--------------------------+-----------------+----------|
+|   1 | eisitirio 1              | eisitirio       |     1:42 |
+|   2 | synora grammika ensemble | eisitirio       |     1:42 |
+|   3 | mitera lefteris          | levteris_speaks |     4:44 |
+|   4 | kefes reza 2             |                 |          |
+|-----+--------------------------+-----------------+----------|
+#+TBLFM: $1=@-1 + 1::@3$1=1
+** Master plan 2 (16.9)
+1. hasan song dance circle
+2. eisitirio
+   1. eisitirio plain
+   2. eisitirio  harmonies
+3. reza woman letter poem
+4. hasan song
+   1. hasan song plain
+   2. hasan song pv
+5. lefteris
+6. pre-finale : hasan song dance distorted, wilder
+7. hasan: eimaste metanastes or: stories: frappe
+** Master plan 3 (21.9)
+:PROPERTIES:
+:DATE:     <2015-09-21 Mon 07:19>
+:END:
+
+| ! |  ! |     | sound              | image                 | action         | master_button |
+| # |  1 | 1.1 | hasan song         | circle-wave           | hasan perf.    |           1.1 |
+| # |  2 | 1.2 | ypochthonio        | chaos globe           | hasan off      |           2.1 |
+| # |  3 | 1.3 | dark gloog         | globe slows           | -              |           3.1 |
+| # |  4 | 2.1 | eisitirio          | persian phrase        | -              |           1.2 |
+| # |  5 | 2.2 | eis. resonz        | color polygons        | -              |           2.2 |
+| # |  6 | 3.1 | reza letter        | woman + webcam        | reza w. webcam |           1.3 |
+| # |  7 | 4.1 | reza song          | spiral tail           | reza dance?    |           1.4 |
+| # |  8 | 5.1 | levteris           | line on hand          | levteris dance |           1.5 |
+| # |  9 | 5.2 | + tickly l. live   | line on hand          | levteris dance |           2.5 |
+| # | 10 | 5.3 | noiseresonz        |                       |                |           3.5 |
+| # | 11 | 5.4 | faster1            |                       |                |           4.5 |
+| # | 12 | 5.5 | faster2            |                       |                |           5.5 |
+| # | 13 | 6.1 | stories "anekdota" | straight line         | ?              |           1.6 |
+| # | 14 | 7.1 | veryfast           | spiral tail b?/ globe | ?              |           2.6 |
+| # | 15 |     | hpf                |                       |                |           3.6 |
+| # | 16 |     | lpfnoise           |                       |                |           4.6 |
+| # | 17 |     | hpfnoise           |                       |                |           5.6 |
+| # | 18 |     | resonznoise0       |                       |                |           7.1 |
+| # | 19 |     | resonznoise1       |                       |                |           7.2 |
+| # | 20 |     | veryfast1          |                       |                |           7.3 |
+| # | 21 |     | veryfast2          |                       |                |           7.4 |
+#+TBLFM: $2=@-1 + 1::@2$2=1
+
+
+* MIDI controller config
+** MIDI assignments
+:PROPERTIES:
+:DATE:     <2015-09-20 Sun 17:31>
+:END:
+*** Scene and sub-scene switches
+:PROPERTIES:
+:DATE:     <2015-09-20 Sun 20:53>
+:END:
+Scene and sub-scene switches are assigned to buttons on JLC.
+Main scenes are assigned to top row buttons, from left to right.
+Subscenes to subsequent rows. Each column of buttons belongs to one scene.
+
+| 1 | 1 | hasan song dance                  |   |
+| 2 | 1 | eisitirio plain                   |   |
+| 2 | 2 | eisitirio  harmonies              |   |
+| 3 | 1 | reza woman letter                 |   |
+| 4 | 1 | reza2 song                        |   |
+| 4 | 2 | reza2 song pv                     |   |
+| 5 | 1 | lefteris                          |   |
+| 6 | 1 | has song pv                       |   |
+| 7 | 1 | epilogue: funny story / manifesto |   |
+*** controls multifx
+**** Knobs
+
+|   | 1    | 2         | 3         | 4          | 5      | 6      | 7      | 8      |
+|---+------+-----------+-----------+------------+--------+--------+--------+--------|
+| ! | res  | res noise | res noise | p amp      | above  | below  | smear  | freeze |
+| 1 | wet  | wet       | lo        | wet        | wet    | wet    | wet    | wet    |
+| 2 | freq | freq      | hi        | pan        | thresh | thresh | thresh | thresh |
+| 3 | q    | q         | fmul      | rev wet    | pan    | pan    | pan    | pan    |
+| 4 | fmul | rate      | pan       | rev w. pan |        |        |        |        |
+|---+------+-----------+-----------+------------+--------+--------+--------+--------|
+
+**** Row 1
+
+| ! | column | fx_type | row 1 | row 2 |   |
+| # |      1 | pinkamp | amp   |       |   |
+| # |      2 | resonz1 | amp   |       |   |
+| # |      3 | resonz2 |       |       |   |
+| # |      4 |         |       |       |   |
+| # |      5 |         |       |       |   |
+| # |      6 |         |       |       |   |
+| # |      7 |         |       |       |   |
+| # |      8 |         |       |       |   |
+| # |      9 |         |       |       |   |
+| # |     10 |         |       |       |   |
+| # |     11 |         |       |       |   |
+| # |     12 |         |       |       |   |
+| # |     13 |         |       |       |   |
+| # |     14 |         |       |       |   |
+| # |     15 |         |       |       |   |
+| # |     16 |         |       |       |   |
+#+TBLFM: $2=@-1 + 1::@2$2=1
+
+**** Row 2
+
+
+
+
+*** 1 Hasan Song Dance 1
+**** Hasan Song Plain
+**** Hasan Song Amp
+
+
+
+*** 2. Eisitirio
+**** 2.1 Eisitirio Plain
+**** 2.2 Eisitirio Harmonies
+*** 3.1 Reza Woman Letter
+*** 4. Reza 2 Song
+**** 4.1 Reza 2 Song plain
+**** 4.2 Reza 2 Song PV
+*** 5. Levteris
+*** 6. Hasan Song Dance 2 PV
+*** 7. Aerodromio
+
+
+** MIDI messages sent by controllers used in show
+*** MIDI controls of LIVID code interface:
+**** Physical orientation - placement of device in relation to performer
+
+NOTE: Place device with plain long side towards the player (self) and cutout "code" logo towards the audience (outwards).
+**** Knobs
+
+32 knobs, in 4 rows of 8 knobs each.
+
+Then, the knobs send the following MIDI commands:
+
+Starting on the upper left corner, and proceeding:
+- First down the rows (rows 1, 2, 3, 4 on the first column)
+- Then down columns (columns 1 - 8)
+
+All knobs send on Channel 0, type control (CC) and numbers 1 to 32
+
+Table arrangement of knobs and their control number correspondence:
+
+| 1 | 5 |  9 | 13 | 17 | 21 | 25 | 29 |
+| 2 | 6 | 10 | 14 | 18 | 22 | 26 | 30 |
+| 3 | 7 | 11 | 15 | 19 | 23 | 27 | 31 |
+| 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32 |
+#+TBLFM: $2=$-1+4::$3=$-1+4::$4=$-1+4::$5=$-1+4::$6=$-1+4::$7=$-1+4::$8=$-1+4
+**** Knob-Buttons
+
+Each knob is also a button - when pressed on top.  These buttons send note-on / note-off messages when pressed - released.  They send on channel 0, nums (notes) 1 to 32, as follows:
+
+| 1 | 5 |  9 | 13 | 17 | 21 | 25 | 29 |
+| 2 | 6 | 10 | 14 | 18 | 22 | 26 | 30 |
+| 3 | 7 | 11 | 15 | 19 | 23 | 27 | 31 |
+| 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32 |
+
+**** Buttons
+
+The buttons send NoteOn and NoteOff messages on press/release, all on channel 0.
+
+The key numbers are:
+
+| 33 |    |    |    |    |    |    |    |    |
+| 34 |    |    |    |    |    |    |    |    |
+| 35 |    |    |    |    |    |    |    |    |
+| 36 |    |    |    |    |    |    |    |    |
+| 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 |
+#+TBLFM: $1=@-1 + 1::@1$1=33
+
+*** MIDI controls for JLCooper CS-32
+
+**** Buttons
+
+Note: Total number of main buttons on rows x 2 control message assignments per button (light indicator on and off states):
+
+|-------------------------+-----|
+| buttons per row         |  16 |
+| number of rows          |   6 |
+| x 2 controls per button |   2 |
+|-------------------------+-----|
+|                         | 192 |
+|-------------------------+-----|
+#+TBLFM: @4$2=vprod(@-II..@-I)
+
+192 buttons, in two goups of 96 buttons each!
+
+***** State 1 (light indicator off)
+
+From left to right and top to bottom, first horizontally along the columns and then vertically down the rows:
+
+Top left: chan 14, num 48, val 0/127
+
+   (---------- TOP ROW GROUP ----------)
+1. Row 1: Chan 14, nums 48-63
+2. Row 2: Chan 13, nums 112-127
+3. Row 3: Chan 13, nums 48-127
+   (---------- BOTTOM ROW GROUP ---------)
+4. Row 4: Chan 14, nums 32-47
+5. Row 5: Chan 13, nums 96-111
+6. Row 6: Chan 13, nums 32-47
+
+
+***** State 2 (light indicator on)
+
+   (---------- TOP ROW GROUP ----------)
+1. Row 1: Chan 14, nums 16-31
+2. Row 2: Chan 13, nums 80-95
+3. Row 3: Chan 13, nums 16-31
+   (---------- BOTTOM ROW GROUP ---------)
+4. Row 4: Chan 14, nums 0-15
+5. Row 5: Chan 13, nums 64-79
+6. Row 6: Chan 13, nums 0-15
+
+**** Sliders
+
+32 sliders, in 2 rows of 16 sliders each
+
+1. Top row: Control (CC), channel 15, nums 16-31
+2. Bottom row: Control (CC), channel 15, nums 0-15
+
+
+* Buffer detail notes
+** istories
+|-------+-------+----------+-----------------------------------|
+|  from |    to | who      | content                           |
+|-------+-------+----------+-----------------------------------|
+|  2:00 |  4:30 | lefteris | lefteris poly fovamai             |
+|  4:30 |  5:30 | lefteris | agorasa spiti                     |
+|  5:30 |       | ?        | milisa me galia                   |
+|  6:10 |  6:44 | lefteris | douleia chrimata lathos           |
+|  6:44 |  7:30 | ?        | mporei na kanei kati              |
+|  7:40 |  9:00 | reza     | kafes                             |
+|  9:00 |    10 | ?        | douleia - kafes 2 fores           |
+| 10:00 | 10:30 | ?        | kafes den echei anoixei           |
+| 10:45 | 14:30 | hasan    | kryo mytilini afixi kreas alcohol |
+| 14:30 | 15:22 | levteris | kyria kafe krasi                  |
+|-------+-------+----------+-----------------------------------|
+
+* Effects coupled to buffers
+Eisitirio + Ringz
+
+Song1 + magfreeze
+
+* Songs to use
+
+song1 ok
+song3_small_unison
+
+* Other buffers to use
+eisitirio
+levteris_speaks
+speaks1
+
+** Not to use
+song2
+song4_hasan

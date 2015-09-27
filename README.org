@@ -1,0 +1,12 @@
+* About
+Code and notes for the "Transient Words" piece.
+
+Performance: ZKM Kubus, Sunday September 27, 2015, 20:00 h.
+
+Files cloned from Osmosis/Migrations piece, then adapted for new piece.
+
+* Program notes
+
+"Transient Words", for SuperCollider
+
+The recurrent of waves of immigration on the globe, due to economic factors and social or political crises, have a profound influence on our culture and affect the lives of major parts of the population in many countries. In the past century, Greece has experienced a series of such migrations, and in the past 20 years this phenomenon has climaxed to a dramatic degree, caused by series of crises in Eastern Europe, Asia and Africa. Transient Words is a study based on recordings of the voices of persons who have been affected by these migrations.  It combines the sound characteristics from many languages such as Russian, Greek, Pontic Greek, Georgian, Hazaragi (a close relative of Persian spoken by the Hazara people in Afghanistan and Pakistan), and others.  The recordings were made in southern Georgia and Athens with persons whose families have migrated in Greece and with refugees from Afghanistan and Pakistan.  The voices are transformed using spectral processing algorithms, and the goal is to weave a new story out of the many stories told by different voices.
