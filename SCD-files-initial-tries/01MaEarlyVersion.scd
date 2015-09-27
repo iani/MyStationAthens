@@ -1,41 +1,4 @@
-//:
-Ma.start;
-//:
-Ma.narrowKubus;
-//:
-Ma.kubusMove;
-//:
-Ma.r1_150;
-Ma.r1_200;
-Ma.r1_250;
-Ma.r1_300;
-Ma.r1_0;
-Ma.r1_1000;
-Ma.r1_90;
-Ma.r1_50;
-Ma.r1_25;
-Ma.r1_25cluster;
-Ma.r1_25cluster;
-
-Ma.r2_150;
-Ma.r2_200;
-Ma.r2_250;
-Ma.r2_300;
-Ma.r2_0;
-
-//:
-1 +>.vol \pm1;
-0.82 +>.vol \pm1;
-0.72 +>.vol \pm1;
-0.62 +>.vol \pm1;
-0.52 +>.vol \pm1;
-0.42 +>.vol \pm1;
-0.32 +>.vol \pm1;
-0.1 +>.vol \pm1;
-0.05 +>.vol \pm1;
-0.01 +>.vol \pm1;
-0.005 +>.vol \pm1;
-
+"(a.b)".arlink;
 //:
 "([m1.m2.m3.m4][rm1.rm2.rm3]pm1)([e1.e2.e3.e4]re)".arlink;
 //:
@@ -120,15 +83,6 @@ SF.playbuf ++> \m2;
 { Mix (Resonz.ar (Inp.ar, 150 * [1, 1.25, 1.3, 1,5, 1.8, 2, 2.5, 3, 3.5, 4, 4.5],
 	0.0001))
 	* 10
-
-} ++> \rm1;
-//:
-{ Mix (Resonz.ar (Inp.ar, 150 * [1, 1.25, 1.3, 1,5, 1.8, 2, 2.5, 3, 3.5, 4, 4.5],
-	// LFDNlise1.kr (1).range (0.0001, 1)
-	0.1
-
-   ))
-	* 1
 
 } ++> \rm1;
 //:
