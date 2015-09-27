@@ -1,8 +1,9 @@
-* MIDI controls of LIVID code interface:
-** Physical orientation - placement of device in relation to performer
+* Overview of available controllers
+** MIDI controls of LIVID code interface:
+*** Physical orientation - placement of device in relation to performer
 
 NOTE: Place device with plain long side towards the player (self) and cutout "code" logo towards the audience (outwards).
-** Knobs
+*** Knobs
 
 32 knobs, in 4 rows of 8 knobs each.
 
@@ -21,7 +22,7 @@ Table arrangement of knobs and their control number correspondence:
 | 3 | 7 | 11 | 15 | 19 | 23 | 27 | 31 |
 | 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32 |
 #+TBLFM: $2=$-1+4::$3=$-1+4::$4=$-1+4::$5=$-1+4::$6=$-1+4::$7=$-1+4::$8=$-1+4
-** Knob-Buttons
+*** Knob-Buttons
 
 Each knob is also a button - when pressed on top.  These buttons send note-on / note-off messages when pressed - released.  They send on channel 0, nums (notes) 1 to 32, as follows:
 
@@ -30,7 +31,7 @@ Each knob is also a button - when pressed on top.  These buttons send note-on / 
 | 3 | 7 | 11 | 15 | 19 | 23 | 27 | 31 |
 | 4 | 8 | 12 | 16 | 20 | 24 | 28 | 32 |
 
-** Buttons
+*** Buttons
 
 The buttons send NoteOn and NoteOff messages on press/release, all on channel 0.
 
@@ -43,9 +44,9 @@ The key numbers are:
 | 37 | 38 | 39 | 40 | 41 | 42 | 43 | 44 | 45 |
 #+TBLFM: $1=@-1 + 1::@1$1=33
 
-* MIDI controls for JLCooper CS-32
+** MIDI controls for JLCooper CS-32
 
-** Buttons
+*** Buttons
 
 Note: Total number of main buttons on rows x 2 control message assignments per button (light indicator on and off states):
 
@@ -60,7 +61,7 @@ Note: Total number of main buttons on rows x 2 control message assignments per b
 
 192 buttons, in two goups of 96 buttons each!
 
-*** State 1 (light indicator off)
+**** State 1 (light indicator off)
 
 From left to right and top to bottom, first horizontally along the columns and then vertically down the rows:
 
@@ -76,7 +77,7 @@ Top left: chan 14, num 48, val 0/127
 6. Row 6: Chan 13, nums 32-47
 
 
-*** State 2 (light indicator on)
+**** State 2 (light indicator on)
 
    (---------- TOP ROW GROUP ----------)
 1. Row 1: Chan 14, nums 16-31
@@ -87,9 +88,20 @@ Top left: chan 14, num 48, val 0/127
 5. Row 5: Chan 13, nums 64-79
 6. Row 6: Chan 13, nums 0-15
 
-** Sliders
+*** Sliders
 
 32 sliders, in 2 rows of 16 sliders each
 
 1. Top row: Control (CC), channel 15, nums 16-31
 2. Bottom row: Control (CC), channel 15, nums 0-15
+* Assignments
+
+Blip "Multi" 0-7:
+On Livid Code controller knobs:
+
+Columns 1 to 8 correspond to Multi0 - Multi7.
+Rows are:
+1. (Top row:) y (elevation)
+2. (second row:) x (azimuth)
+3. width
+4. level (vol)

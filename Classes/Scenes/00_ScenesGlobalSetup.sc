@@ -1,11 +1,28 @@
 Scenes {
 	*init {
+		Server.local.options.numOutputBusChannels = 43;
 		Server.local.boot;
 		BufferList.loadFolder;
 		MIDIIn.connectAll;
 		// MIDIFunc trace: true;
 		this.connectJLC;
 		this.connectLivid;
+	}
+
+	*channelCheck {
+		{ | chan = 0 rate = 1 vol = 0.1 |
+			var src;
+			src = PinkNoise.ar (Decay2.kr (Impulse.kr (rate), decayTime: rate.reciprocal));
+			Out.ar (chan, src * vol)
+		} ++> \channelCheck;
+		{
+			inf do: { | i |
+				i = i % 43;
+				postf ("Setting output channel to %\n", i);
+				i +>.chan \channelCheck;
+				1.wait;
+			}
+		}.fork;
 	}
 	
 	*connectJLC {
