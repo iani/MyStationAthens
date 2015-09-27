@@ -3,9 +3,12 @@
 //:
 ////////////////////////////////////////////////////////////////
 //:
-{ Mix (Resonz.ar (Inp.ar, 100 * [1, 1.2, 1.25, 1.8, 2, 3],
-	XLine.kr (1, 0.0005, 30)))
-	* XLine.kr (1, 15, 60)
+{ | vol = 1 pos = 0 width = 0 |
+	var src;
+	src = Mix (Resonz.ar (Inp.ar, 100 * [1, 1.2, 1.25, 1.8, 2, 3],
+		XLine.kr (1, 0.0005, 30)))
+	* XLine.kr (1, 15, 60);
+	PanAz.ar (43, src * vol, pos, 1, width * 43 + 2);
 } ++> \rm1;
 //:
 \levteris_speaks.bufnum +>.buf \m1;
@@ -40,19 +43,19 @@ SF.playbuf ++> \m4;
 //:
 3 +>.fadeTime \rm1;
 //:
-{ Mix (Resonz.ar (Inp.ar, 100 * [1, 1.2, 1.25, 1.8, 2, 3],
+{ Mix (Resonz.ar (Inp.ar, 150 * [1, 1.2, 1.25, 1.8, 2, 3],
 	0.0005))
 	* 10
 
 } ++> \rm1;
 //:
-{ Mix (Resonz.ar (Inp.ar, 100 * [1, 1.2, 1.25, 1.8, 2, 3],
+{ Mix (Resonz.ar (Inp.ar, 200 * [1, 1.2, 1.25, 1.8, 2, 3],
 	0.0005))
 	* 10
 
 } ++> \rm2;
 //:
-{ Mix (Resonz.ar (Inp.ar, 100 * [1, 1.25, 1.3, 1,5, 1.8, 2, 2.5, 3],
+{ Mix (Resonz.ar (Inp.ar, 250 * [1, 1.25, 1.3, 1,5, 1.8, 2, 2.5, 3],
 	0.0005))
 	* 10
 
