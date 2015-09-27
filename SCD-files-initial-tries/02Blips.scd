@@ -3,7 +3,7 @@
 	var name;
 	name = format("b%", n).asSymbol;
 	n = n % 4;
-	{ | pos = 0 vol = 1 width = 0 |
+	{ | pos = 0 vol = 1.2 width = 0 |
 		var src, pan;
 		src = Blip.arp(
 			1 + n / 2 * Line.kr(Rand(20, 80).midicps, Rand(20, 80).midicps, Rand(0.1, 1)),
@@ -16,13 +16,15 @@
 	([0.25.pn(14), 5 ! 3, 1, 2, 0.1 ! 10, 3] / (0.5 + (n / 4))).flat.prand *> name;
 } ! 8;
 //:
-8 do: { | i | 0 +>.vol format ("b%", i).asSymbol };
+8 do: { | i | 0.10 +>.vol format ("b%", i).asSymbol };
+//:
+8 do: { | i | 0.010 +>.vol format ("b%", i).asSymbol };
 //:
 8 do: { | i | 0.1 +>.vol format ("b%", i).asSymbol };
 //:
-8 do: { | i | 1 +>.pos format ("b%", i).asSymbol };
+8 do: { | i | 1 * i +>.pos format ("b%", i).asSymbol };
 //:
-8 do: { | i | 0.2 +>.width format ("b%", i).asSymbol };
+8 do: { | i | 1.2 +>.width format ("b%", i).asSymbol };
 
 //:
 0.1 +>.vol \b0;
@@ -133,6 +135,8 @@
 
 //: #+BEGIN_SRC sclang
 \b7 *> 0.1;
+//:
+
 //: #+BEGIN_SRC sclang
 ([0.25.pn(14), 5 ! 3, 1, 0.4 ! 10, 0.1 ! 20, 3] / 4).flat.prand *> \b7;
 { | n | Pfunc({ 0.01 exprand: 0.35 }) +>.amp format("b%", n).asSymbol } ! 8;

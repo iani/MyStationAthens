@@ -3,10 +3,21 @@
 Levteris {
 	*start {
 		"--- Starting Levteris".postln;
-		'levteris_speaks'.bufnum +>.buf \levteris;
-		1.2 +>.vol \levteris;
-		SF.playbufpan ++> \levteris;
-		
+		"starting resonz".postln;
+		{ | vol = 1 pos = 0 width = 0.8 |
+			var src;
+			src = Mix (Resonz.ar (Inp.ar, 100 * [1, 1.2, 1.25, 1.8, 2, 3],
+				XLine.kr (1, 0.0005, 30)))
+			* XLine.kr (1, 15, 60);
+			PanAz.ar (43, src * vol, pos, 1, width * 43 + 2);
+		} ++> \rm1;
+		//:
+		"starting lefteris ma".postln;
+		\levteris_speaks.bufnum +>.buf \m1;
+		273.8 +>.startPos \m1;
+		1 +>.rate \m1;
+		1 +>.loop \m1;
+		SF.playbuf ++> \m1;		
 	}
 
 	*dance {

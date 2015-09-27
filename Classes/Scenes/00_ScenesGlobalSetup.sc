@@ -175,7 +175,7 @@ Scenes {
 	*setupKubus {
 		"================================================================".postln;
 		"WIRING SYNTHS".postln;
-		"([m1.m2.m3.m4]rm)([e1.e2.e3.e4]re)".arlink;
+		"([m1.m2.m3.m4]rm1)([e1.e2.e3.e4]re1)".arlink;
 		/*
 		"SETTING UP KUBUS".postln;
 		{ | n |
@@ -187,9 +187,8 @@ Scenes {
 		"------------------- READY TO GO !!!!!!! ---------------".postln;
 	}
 
-	*ma {
-		
-	}
+	*start { this.ma; }
+	*ma { Levteris.start; }
 
 	*eisitirio {
 		
