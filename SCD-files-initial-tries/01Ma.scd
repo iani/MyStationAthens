@@ -16,12 +16,37 @@ Ma.r1_50;
 Ma.r1_25;
 Ma.r1_25cluster;
 Ma.r1_25cluster;
+Ma.r1_250cluster;
+Ma.r1_1000cluster;
+Ma.r1_2500cluster;
+Ma.r1_2500gliss;
+Ma.r1_2500gliss (1);
+Ma.r1_rgliss (10);
+
+0.1 +>.fadeTime \rm1;
+0.5 +>.fadeTime \rm1;
+1.1 +>.fadeTime \rm1;
+2.1 +>.fadeTime \rm1;
+
+Ma.r1_rgliss (1);
+Ma.r1_rgliss (0.1);
+Ma.r1_rgliss (0.5);
+
+Ma.r1_noise0 (100, 120, 10);
+Ma.r1_noise0 (1000, 1200, 10);
+Ma.r1_noise0 (1000, 1500, 1);
+
+Ma.r1_noise1 (100, 120, 10);
+Ma.r1_noise1 (1000, 1200, 10);
+Ma.r1_noise1 (1000, 1500, 1);
+
 
 Ma.r2_150;
 Ma.r2_200;
 Ma.r2_250;
 Ma.r2_300;
 Ma.r2_0;
+
 
 //:
 1 +>.vol \pm1;
@@ -35,6 +60,32 @@ Ma.r2_0;
 0.05 +>.vol \pm1;
 0.01 +>.vol \pm1;
 0.005 +>.vol \pm1;
+
+//:
+1 +>.vol \rm1;
+0.82 +>.vol \rm1;
+0.72 +>.vol \rm1;
+0.62 +>.vol \rm1;
+0.52 +>.vol \rm1;
+0.42 +>.vol \rm1;
+0.32 +>.vol \rm1;
+0.1 +>.vol \rm1;
+0.05 +>.vol \rm1;
+0.01 +>.vol \rm1;
+0.005 +>.vol \rm1;
+
+//:
+1 +>.vol \rm2;
+0.82 +>.vol \rm2;
+0.72 +>.vol \rm2;
+0.62 +>.vol \rm2;
+0.52 +>.vol \rm2;
+0.42 +>.vol \rm2;
+0.32 +>.vol \rm2;
+0.1 +>.vol \rm2;
+0.05 +>.vol \rm2;
+0.01 +>.vol \rm2;
+0.005 +>.vol \rm2;
 
 //:
 "([m1.m2.m3.m4][rm1.rm2.rm3]pm1)([e1.e2.e3.e4]re)".arlink;
