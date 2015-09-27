@@ -3,7 +3,7 @@
 *** Physical orientation - placement of device in relation to performer
 
 NOTE: Place device with plain long side towards the player (self) and cutout "code" logo towards the audience (outwards).
-*** Knobs
+*** Knobs (Dials)
 
 32 knobs, in 4 rows of 8 knobs each.
 
@@ -95,6 +95,7 @@ Top left: chan 14, num 48, val 0/127
 1. Top row: Control (CC), channel 15, nums 16-31
 2. Bottom row: Control (CC), channel 15, nums 0-15
 * Assignments
+** Blips on Livid
 
 Blip "Multi" 0-7:
 On Livid Code controller knobs:
@@ -105,3 +106,60 @@ Rows are:
 2. (second row:) x (azimuth)
 3. width
 4. level (vol)
+** Voices on JLCooper
+*** Ma: Top row
+**** Knobs
+1. global vol
+2. x
+3. y
+
+**** Sliders:
+1. q
+2. width
+3. resonz freq
+4. resonz lfnoise rate
+5. resonz lfnoise lo
+6. resonz lfnoise hi
+7. ------------ EMPTY ---------
+8. ------------ EMPTY ---------
+9. vol 1
+10. playbuf rate 1
+11. vol 2
+12. playbuf rate 2
+13. vol 3
+14. playbuf rate 3
+15. vol 4
+16. playbuf rate 4
+
+
+**** Buttons
+
+1 - 4: playbuf 1 - 4
+
+*** Eisitirio: Bottom row
+**** Knobs
+4. global vol
+5. x
+6. y
+
+**** Sliders:
+1. q
+2. width
+3. resonz freq
+4. resonz lfnoise rate
+5. resonz lfnoise lo
+6. resonz lfnoise hi
+7. ------------ EMPTY ---------
+8. ------------ EMPTY ---------
+9. vol 1
+10. playbuf rate 1
+11. vol 2
+12. playbuf rate 2
+13. vol 3
+14. playbuf rate 3
+15. vol 4
+16. playbuf rate 4
+
+**** Buttons
+
+1 - 4: playbuf 1 - 4

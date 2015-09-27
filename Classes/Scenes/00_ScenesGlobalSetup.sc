@@ -5,8 +5,12 @@ Scenes {
 		BufferList.loadFolder;
 		MIDIIn.connectAll;
 		// MIDIFunc trace: true;
-		this.connectJLC;
 		this.connectLivid;
+		this.connectJLC;
+		Server.local.doWhenBooted ({
+			Server.local.scope (zoom: 16);
+			{ this.setupKubus; }.defer (1);
+		});
 	}
 
 	*channelCheck {
@@ -25,6 +29,116 @@ Scenes {
 		}.fork;
 	}
 	
+	*connectLivid {
+		/*
+			Blip "Multi" b0-7:
+			On Livid Code controller knobs:
+
+			Columns 1 to 8 correspond to Multi0 - Multi7.
+			Rows are:
+			1. (Top row:) y (elevation)
+			2. (second row:) x (azimuth)
+			3. width
+			4. vol  (level)
+		*/
+		Dial (1, { | val |
+			val / 127 +>.y \k0; [\y, \k0].postln;
+		});
+		Dial (2, { | val |
+			val / 127 +>.x \k0; [\x, \k0].postln;
+		});
+		Dial (3, { | val |
+			val / 127 +>.width \k0; [\width, \k0].postln;
+		});
+		Dial (4, { | val |
+			val / 127 +>.vol \k0; [\vol, \k0].postln;
+		});
+		Dial (5, { | val |
+			val / 127 +>.y \k1; [\y, \k1].postln;
+		});
+		Dial (6, { | val |
+			val / 127 +>.x \k1; [\x, \k1].postln;
+		});
+		Dial (7, { | val |
+			val / 127 +>.width \k1; [\width, \k1].postln;
+		});
+		Dial (8, { | val |
+			val / 127 +>.vol \k1; [\vol, \k1].postln;
+		});
+		Dial (9, { | val |
+			val / 127 +>.y \k2; [\y, \k2].postln;
+		});
+		Dial (10, { | val |
+			val / 127 +>.x \k2; [\x, \k2].postln;
+		});
+		Dial (11, { | val |
+			val / 127 +>.width \k2; [\width, \k2].postln;
+		});
+		Dial (12, { | val |
+			val / 127 +>.vol \k2; [\vol, \k2].postln;
+		});
+		Dial (13, { | val |
+			val / 127 +>.y \k3; [\y, \k3].postln;
+		});
+		Dial (14, { | val |
+			val / 127 +>.x \k3; [\x, \k3].postln;
+		});
+		Dial (15, { | val |
+			val / 127 +>.width \k4; [\width, \k3].postln;
+		});
+		Dial (16, { | val |
+			val / 127 +>.vol \k4; [\vol, \k3].postln;
+		});
+		Dial (17, { | val |
+			val / 127 +>.y \k5; [\y, \k4].postln;
+		});
+		Dial (18, { | val |
+			val / 127 +>.x \k5; [\x, \k4].postln;
+		});
+		Dial (19, { | val |
+			val / 127 +>.width \k5; [\width, \k4].postln;
+		});
+		Dial (20, { | val |
+			val / 127 +>.vol \k5; [\vol, \k4].postln;
+		});
+		Dial (21, { | val |
+			val / 127 +>.y \k2; [\y, \k5].postln;
+		});
+		Dial (22, { | val |
+			val / 127 +>.x \k2; [\x, \k5].postln;
+		});
+		Dial (23, { | val |
+			val / 127 +>.width \k3; [\width, \k5].postln;
+		});
+		Dial (24, { | val |
+			val / 127 +>.vol \k3; [\vol, \k5].postln;
+		});
+		Dial (25, { | val |
+			val / 127 +>.y \k3; [\y, \k6].postln;
+		});
+		Dial (26, { | val |
+			val / 127 +>.x \k3; [\x, \k6].postln;
+		});
+		Dial (27, { | val |
+			val / 127 +>.width \k4; [\width, \k6].postln;
+		});
+		Dial (28, { | val |
+			val / 127 +>.vol \k4; [\vol, \k6].postln;
+		});
+		Dial (29, { | val |
+			val / 127 +>.y \k4; [\y, \k7].postln;
+		});
+		Dial (30, { | val |
+			val / 127 +>.x \k4; [\x, \k7].postln;
+		});
+		Dial (31, { | val |
+			val / 127 +>.width \k3; [\width, \k7].postln;
+		});
+		Dial (32, { | val |
+			val / 127 +>.vol \k3; [\vol, \k7].postln;
+		});
+	}
+
 	*connectJLC {
 		JLbutton (1, 1, { HasanSong.plain }, { \hasansong release: 3 });
 		JLbutton (1, 2, { HasanSong.ypochthonio }, { \hasansong release: 3 });
@@ -57,13 +171,25 @@ Scenes {
 		JLbutton (7, 3, { Aerodromio.veryfast1 }, { \veryfast release: 0.1 });
 		JLbutton (7, 4, { Aerodromio.veryfast2 }, { \veryfast release: 0.1 });		
 	}
+	
+	*setupKubus {
+		"================================================================".postln;
+		"WIRING SYNTHS".postln;
+		"(b0.k0)(b1.k1)(b2.k2)(b3.k3)(b4.k4)(b5.k5)(b6.k6)(b7.k7)([m1.m2.m3.m4]rm.km)([e1.e2.e3.e4]re.ke)".arlink;
+		"SETTING UP KUBUS".postln;
+		{ | n |
+			SF.kubus ++> format ("k%", n).asSymbol;
+		} ! 8;
+		SF.kubus ++> \km;
+		SF.kubus ++> \ke;
+		"------------------- READY TO GO !!!!!!! ---------------".postln;
+	}
 
-	*connectLivid {
-		KnobOn (1, { Eisitirio.intro; });  // knob col 1 row 1
-		// KnobOff (1, { "just testing knob off".postln; });
-		KnobOn (5, { Reza.start });       // col 2 row 1
-		KnobOn (9, { HasanSong.plain });  // col 3 row 1
-		KnobOn (10, { HasanSong.pv });    // col 3 row 2
-		KnobOn (13, { Levteris.start });  // col 4 row 1
+	*ma {
+		
+	}
+
+	*eisitirio {
+		
 	}
 }

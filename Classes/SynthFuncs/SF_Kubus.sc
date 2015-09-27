@@ -9,11 +9,11 @@
 			ring3 = PanAz.ar (8, vertical [2], x, 1, width * 12 + 2, o3);
 			ring4 = PanAz.ar (6, vertical [3], x, 1, width * 10 + 2, o4);
 			ring5 = vertical [4];
-			Out.ar(0, ring1);
-			Out.ar(14, ring2);
-			Out.ar(28, ring3);
-			Out.ar(36, ring4);
-			Out.ar(42, ring5);
+			Out.ar(0, ring1 * vol);
+			Out.ar(14, ring2 * vol);
+			Out.ar(28, ring3 * vol);
+			Out.ar(36, ring4 * vol);
+			Out.ar(42, ring5 * vol);
 		}
 	}
 }

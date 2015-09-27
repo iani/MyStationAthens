@@ -1,25 +1,12 @@
 Eisitirio {
-	*intro {
-		var freqspec;
-		freqspec = \freq.asSpec;
+	*start {
+
+
 		//: PlayBuf: Use envelope to stop. Startpos, dur, rate
-		"--- Scene 1 - INTRO".postln;
+		"--- EISITIRIO! ---".postln;
 		this.introMIDI;
-		// "(eisagogi.[sendpitchamp.panamp])".arlink;
 
-		"(eisagogi[sendpitchamp.panamp])".arlink;
-		
-		// "(eisagogi.panamp)".arlink;
-
-		OSCdef (\pitchamp, { | msg |
-			OF.send ([msg [0], freqspec.unmap (msg [3]), msg [4], msg [5]]);
-			// msg.postln;
-		}, '/pitchamp').permanent = true;
-
-		
-		SF.sendpitchamp ++> \sendpitchamp;
-		SF.panamp ++> \panamp;
-		'eisitirio'.bufnum +>.buf 'eisagogi';
+   		'eisitirio'.bufnum +>.buf '';
 		0 +>.from 'eisagogi';
 		1 +>.rate 'eisagogi';
 		'eisitirio'.buf.duration * 1 +>.dur 'eisagogi';
@@ -28,6 +15,8 @@ Eisitirio {
 
 	*introMIDI {
 		var rate = 1;
+		var freqspec;
+		freqspec = \freq.asSpec;
 		ButtonOn (2, {
 			rate = 'eisagogi'.get (\rate).postln;
 			0 +>.rate 'eisagogi';
