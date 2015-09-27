@@ -1,81 +1,105 @@
 //:
-43 / 8;
-//:
-
-{
-	WhiteNoise.ar (0.0);
-} ++> \x0;
-//:
-"x0.a0".arlink;
-//:
-{ Inp.ar } ++> \a0;
-//:
-"(b0.k0)(b1.k1)(b2.k2)(b3.k3)(b4.k4)(b5.k5)(b6.k6)(b7.k7)([m1.m2.m3.m4]rm.km)([e1.e2.e3.e4]re.ke)".arlink;
-//:
-{ WhiteNoise.ar }
-l
-//:
 { | n |
 	var name;
 	name = format("b%", n).asSymbol;
 	n = n % 4;
-	{
-		Blip.arp(
+	{ | pos = 0 vol = 1 width = 0 |
+		var src, pan;
+		src = Blip.arp(
 			1 + n / 2 * Line.kr(Rand(20, 80).midicps, Rand(20, 80).midicps, Rand(0.1, 1)),
 			Line.kr(Rand(5, 25), Rand(5, 25), 0.5)
 		).perform([\perc, \sine]@@n);
+		pan = PanAz.ar (43, src * vol, pos, 1, width * 43 + 2);
+		Out.ar (0, pan);
 	} +> name;
 
 	([0.25.pn(14), 5 ! 3, 1, 2, 0.1 ! 10, 3] / (0.5 + (n / 4))).flat.prand *> name;
 } ! 8;
 //:
-{ | n |
-	var name;
-	name = format("b%", n).asSymbol;
-	n = n % 4;
-	{
-		WhiteNoise.ar (0.05)
-	} ++> name;
-
-	//	([0.25.pn(14), 5 ! 3, 1, 2, 0.1 ! 10, 3] / (0.5 + (n / 4))).flat.prand *> name;
-} ! 8;
+8 do: { | i | 0 +>.vol format ("b%", i).asSymbol };
 //:
-{ | n |
-	var name;
-	name = format("b%", n).asSymbol;
-	n = n % 4;
-	name.release;
-
-	//	([0.25.pn(14), 5 ! 3, 1, 2, 0.1 ! 10, 3] / (0.5 + (n / 4))).flat.prand *> name;
-} ! 8;
+8 do: { | i | 0.1 +>.vol format ("b%", i).asSymbol };
 //:
-{ | n |
-	var name;
-	name = format("b%", n).asSymbol;
-	n = n % 4;
-	name.release;
+8 do: { | i | 1 +>.pos format ("b%", i).asSymbol };
+//:
+8 do: { | i | 0.2 +>.width format ("b%", i).asSymbol };
 
-	//	([0.25.pn(14), 5 ! 3, 1, 2, 0.1 ! 10, 3] / (0.5 + (n / 4))).flat.prand *> name;
-} ! 8;
+//:
+0.1 +>.vol \b0;
+0.1 +>.pos \b0;
+0.1 +>.width \b0;
+
+1.0 +>.width \b0;
+//:
+0.1 +>.vol \b1;
+0.1 +>.pos \b1;
+0.1 +>.width \b1;
+1 +>.width \b1;
+
+
+//:
+0.1 +>.vol \b2;
+0.1 +>.pos \b2;
+0.1 +>.width \b2;
+1 +>.width \b2;
+//:
+0.1 +>.vol \b3;
+0.1 +>.pos \b3;
+0.1 +>.width \b3;
+1 +>.width \b3;
+//:
+0.1 +>.vol \b4;
+0.1 +>.pos \b4;
+0.1 +>.width \b4;
+1 +>.width \b4;
+//:
+0.1 +>.vol \b5;
+0.1 +>.pos \b5;
+0.1 +>.width \b5;
+1 +>.width \b5;
+//:
+0.1 +>.vol \b6;
+0.1 +>.pos \b6;
+0.1 +>.width \b6;
+1 +>.width \b6;
+//:
+0.1 +>.vol \b7;
+0.1 +>.pos \b7;
+0.1 +>.width \b7;
+1 +>.width \b7;
+//:
+0.1 +>.vol \b0;
+0.1 +>.pos \b0;
+0.1 +>.width \b0;
+1 +>.width \b0;
+//:
+0.1 +>.vol \b1;
+0.1 +>.pos \b1;
+0.1 +>.width \b1;
+1 +>.width \b1;
+//:
+0.1 +>.vol \b2;
+0.1 +>.pos \b2;
+0.1 +>.width \b2;
+1 +>.width \b2;
+//:
+0.1 +>.vol \b3;
+0.1 +>.pos \b3;
+0.1 +>.width \b3;
+1 +>.width \b3;
+//:
+0.1 +>.vol \b4;
+0.1 +>.pos \b4;
+0.1 +>.width \b4;
+1 +>.width \b4;
+//:
+0.1 +>.vol \b5;
+0.1 +>.pos \b5;
+0.1 +>.width \b5;
+1 +>.width \b5;
 //:
 
-{ SinOsc.ar } ++> \k0;
-1 +>.x \k1;
-0 +>.vol \k2;
 
-\k6.release;
-
-
-{ Silent.ar } ++> \k0;
-{ Silent.ar } ++> \k1;
-{ Silent.ar } ++> \k2;
-{ Silent.ar } ++> \k3;
-{ Silent.ar } ++> \k4;
-{ Silent.ar } ++> \k5;
-
-
-{ Silent.ar } ++> \m0;
-{ Silent.ar } ++> \m7;
 
 //: #+BEGIN_SRC sclang
 \b0 **>.xoooo \b0; // use **> to prevent re-starting the master Task

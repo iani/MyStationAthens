@@ -42,106 +42,106 @@ Scenes {
 			4. vol  (level)
 		*/
 		Dial (1, { | val |
-			val / 127 +>.y \k0; [\y, \k0].postln;
+			val / 127 +>.pos \b0; [\pos, \b0].postln;
 		});
 		Dial (2, { | val |
-			val / 127 +>.x \k0; [\x, \k0].postln;
+			val / 127 +>.x \b0; [\x, \b0].postln;
 		});
 		Dial (3, { | val |
-			val / 127 +>.width \k0; [\width, \k0].postln;
+			val / 127 +>.width \b0; [\width, \b0].postln;
 		});
 		Dial (4, { | val |
-			val / 127 +>.vol \k0; [\vol, \k0].postln;
+			val / 127 +>.vol \b0; [\vol, \b0].postln;
 		});
 		Dial (5, { | val |
-			val / 127 +>.y \k1; [\y, \k1].postln;
+			val / 127 +>.pos \b1; [\pos, \b1].postln;
 		});
 		Dial (6, { | val |
-			val / 127 +>.x \k1; [\x, \k1].postln;
+			val / 127 +>.x \b1; [\x, \b1].postln;
 		});
 		Dial (7, { | val |
-			val / 127 +>.width \k1; [\width, \k1].postln;
+			val / 127 +>.width \b1; [\width, \b1].postln;
 		});
 		Dial (8, { | val |
-			val / 127 +>.vol \k1; [\vol, \k1].postln;
+			val / 127 +>.vol \b1; [\vol, \b1].postln;
 		});
 		Dial (9, { | val |
-			val / 127 +>.y \k2; [\y, \k2].postln;
+			val / 127 +>.pos \b2; [\pos, \b2].postln;
 		});
 		Dial (10, { | val |
-			val / 127 +>.x \k2; [\x, \k2].postln;
+			val / 127 +>.x \b2; [\x, \b2].postln;
 		});
 		Dial (11, { | val |
-			val / 127 +>.width \k2; [\width, \k2].postln;
+			val / 127 +>.width \b2; [\width, \b2].postln;
 		});
 		Dial (12, { | val |
-			val / 127 +>.vol \k2; [\vol, \k2].postln;
+			val / 127 +>.vol \b2; [\vol, \b2].postln;
 		});
 		Dial (13, { | val |
-			val / 127 +>.y \k3; [\y, \k3].postln;
+			val / 127 +>.pos \b3; [\pos, \b3].postln;
 		});
 		Dial (14, { | val |
-			val / 127 +>.x \k3; [\x, \k3].postln;
+			val / 127 +>.x \b3; [\x, \b3].postln;
 		});
 		Dial (15, { | val |
-			val / 127 +>.width \k4; [\width, \k3].postln;
+			val / 127 +>.width \b3; [\width, \b3].postln;
 		});
 		Dial (16, { | val |
-			val / 127 +>.vol \k4; [\vol, \k3].postln;
+			val / 127 +>.vol \b3; [\vol, \b3].postln;
 		});
 		Dial (17, { | val |
-			val / 127 +>.y \k5; [\y, \k4].postln;
+			val / 127 +>.pos \b4; [\pos, \b4].postln;
 		});
 		Dial (18, { | val |
-			val / 127 +>.x \k5; [\x, \k4].postln;
+			val / 127 +>.x \b4; [\x, \b4].postln;
 		});
 		Dial (19, { | val |
-			val / 127 +>.width \k5; [\width, \k4].postln;
+			val / 127 +>.width \b4; [\width, \b4].postln;
 		});
 		Dial (20, { | val |
-			val / 127 +>.vol \k5; [\vol, \k4].postln;
+			val / 127 +>.vol \b4; [\vol, \b4].postln;
 		});
 		Dial (21, { | val |
-			val / 127 +>.y \k2; [\y, \k5].postln;
+			val / 127 +>.pos \b5; [\pos, \b5].postln;
 		});
 		Dial (22, { | val |
-			val / 127 +>.x \k2; [\x, \k5].postln;
+			val / 127 +>.x \b5; [\x, \b5].postln;
 		});
 		Dial (23, { | val |
-			val / 127 +>.width \k3; [\width, \k5].postln;
+			val / 127 +>.width \b5; [\width, \b5].postln;
 		});
 		Dial (24, { | val |
-			val / 127 +>.vol \k3; [\vol, \k5].postln;
+			val / 127 +>.vol \b5; [\vol, \b5].postln;
 		});
 		Dial (25, { | val |
-			val / 127 +>.y \k3; [\y, \k6].postln;
+			val / 127 +>.pos \b6; [\pos, \b6].postln;
 		});
 		Dial (26, { | val |
-			val / 127 +>.x \k3; [\x, \k6].postln;
+			val / 127 +>.x \b6; [\x, \b6].postln;
 		});
 		Dial (27, { | val |
-			val / 127 +>.width \k4; [\width, \k6].postln;
+			val / 127 +>.width \b6; [\width, \b6].postln;
 		});
 		Dial (28, { | val |
-			val / 127 +>.vol \k4; [\vol, \k6].postln;
+			val / 127 +>.vol \b6; [\vol, \b6].postln;
 		});
 		Dial (29, { | val |
-			val / 127 +>.y \k4; [\y, \k7].postln;
+			val / 127 +>.pos \b7; [\pos, \b7].postln;
 		});
 		Dial (30, { | val |
-			val / 127 +>.x \k4; [\x, \k7].postln;
+			val / 127 +>.x \b7; [\x, \b7].postln;
 		});
 		Dial (31, { | val |
-			val / 127 +>.width \k3; [\width, \k7].postln;
+			val / 127 +>.width \b7; [\width, \b7].postln;
 		});
 		Dial (32, { | val |
-			val / 127 +>.vol \k3; [\vol, \k7].postln;
+			val / 127 +>.vol \b7; [\vol, \b7].postln;
 		});
 	}
 
 	*connectJLC {
 		JLbutton (1, 1, { HasanSong.plain }, { \hasansong release: 3 });
-		JLbutton (1, 2, { HasanSong.ypochthonio }, { \hasansong release: 3 });
+		JLbutton (1, 2, { HasanSong.pospochthonio }, { \hasansong release: 3 });
 		JLbutton (1, 3, { HasanSong.dalwlk }, { \dalwlk release: 3 });
 
 		JLbutton (2, 1, { Eisitirio.intro }, { \eisagogi release: 3 });
@@ -157,7 +157,7 @@ Scenes {
 		// JLbutton(4, 2, { RezaSong.pv }, { \rezasong release: 3 });
 
 		JLbutton (5, 1, { Levteris.start }, { \levteris release: 3 });
-		JLbutton (5, 2, { Levteris.dance }, { \tickly release: 3 });
+		JLbutton (5, 2, { Levteris.dance }, { \ticklpos release: 3 });
 		JLbutton (5, 3, { Levteris.noiseresonz }, { \tickly release: 3 });
 		JLbutton (5, 4, { Levteris.faster1 }, { \tickly release: 3 });
 		JLbutton (5, 5, { Levteris.faster2 }, { \tickly release: 3 });
@@ -175,13 +175,15 @@ Scenes {
 	*setupKubus {
 		"================================================================".postln;
 		"WIRING SYNTHS".postln;
-		"(b0.k0)(b1.k1)(b2.k2)(b3.k3)(b4.k4)(b5.k5)(b6.k6)(b7.k7)([m1.m2.m3.m4]rm.km)([e1.e2.e3.e4]re.ke)".arlink;
+		"([m1.m2.m3.m4]rm)([e1.e2.e3.e4]re)".arlink;
+		/*
 		"SETTING UP KUBUS".postln;
 		{ | n |
 			SF.kubus ++> format ("k%", n).asSymbol;
 		} ! 8;
-		SF.kubus ++> \km;
-		SF.kubus ++> \ke;
+		SF.kubus ++> \bm;
+		SF.kubus ++> \be;
+		*/
 		"------------------- READY TO GO !!!!!!! ---------------".postln;
 	}
 
