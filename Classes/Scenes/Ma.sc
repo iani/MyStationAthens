@@ -11,10 +11,10 @@ Ma {
 			//	PanAz.ar (43, src * vol, pos, 1, width * 43 + 2);
 			src;
 		} ++> \rm1;
-		{ | vol = 0.5 pos = 0 width = 0.8 |
+		{ | vol = 0.5 pos = 0 |
 			var src;
 			src = Inp.ar;
-			PanAz.ar (43, src * vol, Lag.kr (pos, 0.5), 1, width * 43 + 2);
+			Pan2.ar (src * vol, Lag.kr (pos, 0.5), 1);
 		} ++> \pm1;
 		
 		\levteris_speaks.bufnum +>.buf \m1;
