@@ -323,17 +323,27 @@ Ma {
 		} ++> \rm2;
 	}
 	
-
-	
-	*resMove {
-		{
-			[
-				{
-					
-				}
-			]
-		}
+	*m2 {
+		\levteris_speaks.bufnum +>.buf \m2;
+		273.8 +>.startPos \m2;
+		1 +>.rate \m2;
+		1 +>.loop \m2;
+		SF.playbuf ++> \m2;
 	}
-	
+
+	*m3 {
+		\levteris_speaks.bufnum +>.buf \m3;
+		273.8 +>.startPos \m3;
+		1 +>.rate \m3;
+		1 +>.loop \m3;
+		SF.playbuf ++> \m3;
+	}
+	*m4 {
+		\levteris_speaks.bufnum +>.buf \m4;
+		273.8 +>.startPos \m4;
+		1 +>.rate \m4;
+		1 +>.loop \m4;
+		SF.playbuf ++> \m4;
+	}
 	
 }

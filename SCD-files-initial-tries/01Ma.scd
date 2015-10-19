@@ -3,7 +3,7 @@ Ma.start;
 //:
 Ma.narrowKubus;
 //:
-Ma.kubusMove;
+Ma.kubusMove (13.91);
 //:
 Ma.r1_150;
 Ma.r1_200;
@@ -21,7 +21,7 @@ Ma.r1_1000cluster;
 Ma.r1_2500cluster;
 Ma.r1_2500gliss;
 Ma.r1_2500gliss (1);
-Ma.r1_rgliss (10);
+Ma.r1_rgliss (20);
 
 0.1 +>.fadeTime \rm1;
 0.5 +>.fadeTime \rm1;
@@ -47,9 +47,15 @@ Ma.r2_250;
 Ma.r2_300;
 Ma.r2_0;
 
+//:
+Ma.m2;
+Ma.m3;
+Ma.m4;
+//:
+
 
 //:
-1 +>.vol \pm1;
+1.25 +>.vol \pm1;
 0.82 +>.vol \pm1;
 0.72 +>.vol \pm1;
 0.62 +>.vol \pm1;
@@ -87,25 +93,16 @@ Ma.r2_0;
 0.01 +>.vol \rm2;
 0.005 +>.vol \rm2;
 
-//:
-"([m1.m2.m3.m4][rm1.rm2.rm3]pm1)([e1.e2.e3.e4]re)".arlink;
-//:
 ////////////////////////////////////////////////////////////////
 //:
 0.0 +>.rate \m1;
-//:
 1.0 +>.rate \m1;
-//:
 0.0 +>.rate \m2;
-//:
 1.0 +>.rate \m2;
-//:
 0.0 +>.rate \m3;
-
-//:
 1.0 +>.rate \m3;
-
-//:
+1.0 +>.rate \m4;
+0.0 +>.rate \m4;
 0.1 +>.rate \m1;
 
 //:
